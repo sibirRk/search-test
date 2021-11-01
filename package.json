@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "db": "json-server --watch mock-server.json"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -15,8 +16,11 @@
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-vuex": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
+    "axios": "^0.24.0",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
+    "vue-click-outside": "^1.1.0",
+    "vue-debounce": "^3.0.1",
     "vue-template-compiler": "^2.6.11"
   }
 }

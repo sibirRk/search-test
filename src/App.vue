@@ -1,28 +1,49 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="app-wrapper">
+    <SearchInput
+      v-model="city"
+    />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SearchInput from '@/components/Search-Input.vue';
 
 export default {
   name: 'App',
+
+  data() {
+    return {
+      city: {
+        text: ''
+      }
+    }
+  },
+  
+  created() {
+    // this.$store.dispatch('getSuggestions', 'Моск');
+  },
+  
   components: {
-    HelloWorld
-  }
+    SearchInput
+  },
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  background-color: rgba(#000, 0.1);
+}
+.app-wrapper {
+  width: 100%;
+
+  .search-input {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
 }
 </style>
